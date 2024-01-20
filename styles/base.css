@@ -2,30 +2,29 @@
 
 
 header {
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
+    display: flex;
+
     background: rgb(26, 54, 80);
     padding: 1rem;
 }
 
 .profilepic {
     border-radius: 100px;
-    width: 200px;
-    grid-column: 3/5;
+    width: 100px;
+
 }
 
 .profilename {
     font-family: 'Cardo', Courier, monospace;
-    font-size: 60px;
-    grid-column: 5/13;
+    font-size: 25px;
     color: aliceblue;
-    margin: 70px;
+    margin: 30px;
 }
 
 nav {
     background-color: black;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
     padding: 1rem;
 
 }
@@ -37,11 +36,12 @@ nav {
 .scriptures {
     color: aliceblue;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     margin: 10px;
     font-family: 'Roboto', Courier, monospace;
     text-decoration: none;
 }
+
 
 nav a:hover {
     background-color: #087e4c;
@@ -84,7 +84,6 @@ li {
     font-family: 'roboto', Courier, monospace;
     padding: 40px;
 }
-
 footer p {
     font-size: 20px;
     color: #087e4c;
@@ -96,30 +95,51 @@ footer {
     background-color: rgb(26, 54, 80);
 }
 
-.card{
+.card {
     border: 1px solid black;
     padding: 10px;
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 640px) {
+
+
+    nav {
+        display: flex;
+    }
+
     header {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         background: rgb(26, 54, 80);
         padding: 1rem;
     }
-    
+
     .profilepic {
         border-radius: 100px;
-        width: 150px;
-        
+        width: 200px;
+        grid-column: 3/5;
     }
-    
+
     .profilename {
         font-family: 'Cardo', Courier, monospace;
-        font-size: 30px;
-        
+        font-size: 60px;
+        grid-column: 5/13;
         color: aliceblue;
         margin: 70px;
+    }
+
+    .home,
+    .site-plan,
+    .chamber,
+    .byui,
+    .scriptures {
+        color: aliceblue;
+        text-align: center;
+        font-size: 35px;
+        margin: 10px;
+        font-family: 'Roboto', Courier, monospace;
+        text-decoration: none;
+        flex: 1 1 100%;
     }
 }
