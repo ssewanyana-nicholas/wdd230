@@ -17,6 +17,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #1e1e61;
+    position: relative;
 }
 
 header img {
@@ -68,7 +69,7 @@ main h1 {
     font-size: 25px;
     text-align: center;
     margin: 5px;
-    
+
 }
 
 .line {
@@ -103,7 +104,7 @@ section div {
 section {
     border: 2px solid black;
     margin: 10px;
-    
+
 }
 
 .card a {
@@ -114,9 +115,55 @@ footer p {
     text-align: center;
 
 }
- footer {
+
+footer {
     background-color: #1e1e61;
     color: white;
     padding: 15px;
- }
+}
 
+
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks {
+    display: none;
+
+}
+
+ul.open {
+    display: block;
+}
+
+#darkButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 24px;
+    background-color: #fff;
+    cursor: pointer;
+
+
+
+}
+
+main.dark {
+    background-color: black;
+}
+
+main.dark h2,
+main.dark h1,
+main.dark li,
+main.dark ul,
+main.dark a,
+main.dark div {
+    color: white;
+}
