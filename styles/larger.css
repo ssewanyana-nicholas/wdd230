@@ -45,4 +45,13 @@
         margin-left: 320px;
     }
 
+    ul.menuLinks {
+        display: flex;
+    
+    }
+
+    nav button {
+        display: none;
+    }
+
 }
