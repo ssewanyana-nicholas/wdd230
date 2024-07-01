@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <title>Lazy-loaded Images</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Lazy-loaded Images
+        </h1>
+    </header>
+    <main class="image-container" >
+        <img src="images/cats.webp"  loading="lazy" alt="cat">
+        <img src="images/dog.webp"  loading="lazy" alt="dog">
+        <img src="images/elephant.webp" loading="lazy"  alt="elephant">
+        <img src="images/swroll.webp"  loading="lazy" alt="swroll">
+        <img src="images/lizard.webp"  loading="lazy" alt="lizard">
+        <img src="images/zebra.webp"  loading="lazy" alt="zebra">
+    </main>
+    <footer>
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/lazyload.js"></script>
+</body>
+
+</html>
