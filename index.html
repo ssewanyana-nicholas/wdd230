@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <img src="images/profile-picture.jpg" alt="profile picture">
+        <img src="images/profile-picture.webp" alt="profile picture">
         <span>Nicholas Ssewanyana</span>
         <img src="images/dark-theme.svg" alt="dark mode" id="darkButton">
     </header>
@@ -39,6 +39,22 @@
         </ul>
     </nav>
     <main>
+
+        <div class="hero">
+            <picture>
+                <source srcset="Images/bountiful-temple-lds-small.webp" media="(max-width: 400px)">
+                <source srcset="Images/bountiful-temple-medium.webp" media="(max-width: 960px)">
+                <img src="images/bountiful-temple-large.webp" alt="Bountiful Utah Temple" width="1500" height="750">
+            </picture>
+
+            <div class="herolabel">
+                <p>Bountiful Utah Temple</p>
+            </div>
+
+
+
+        </div>
+
         <h1>WDD 230: Web Frontend Development</h1>
         <hr class="line">
         <div class="parent">
@@ -70,10 +86,13 @@
             <section>
                 <h2>Information</h2>
                 <div>weather: [Placeholders]</div>
-                <div>number of visits to the page: [Placeholders]</div>
+                <div>number of visits to the page: <span class="visits"></span></div>
             </section>
         </div>
     </main>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.079015468034!2d32.5521409760347!3d0.28270260303370837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd3f1dc81405%3A0xe5b3a4e0a2b5694!2sKabowa%2C%20Kampala!5e0!3m2!1sen!2sug!4v1719858902478!5m2!1sen!2sug"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer>
         <p id="copyright"></p>
         <p id="lastModified"></p>
