@@ -113,7 +113,7 @@
         color: white;
     }
     
-    .gallery picture {
+    .pics {
         margin: 0;
         
     
@@ -145,4 +145,8 @@
         
     }
 
+}
+
+.info {
+    text-align: center;
 }
