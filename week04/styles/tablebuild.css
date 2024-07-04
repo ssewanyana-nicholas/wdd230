@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    text-align: center;
+    /* Center contents within main */
+}
+
+table {
+    border-collapse: collapse;
+    width: 150%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+}
+
+caption {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.caption-container {
+    text-align: center;
+}
+
+thead th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
