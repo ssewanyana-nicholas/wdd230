@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the benefits of joining the Kampala Chamber of Commerce. Gain access to exclusive networking events, business resources, and advocacy efforts. Apply for membership today to boost your business visibility and connect with local leaders">
+    <meta name="Author" content="Nicholas Ssewanyana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link type="text/css" rel="stylesheet" href="styles/base.css">
+    <link type="text/css" rel="stylesheet" href="styles/larger.css">
+    <title>Kampala Chamber of Commerce</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Kampala Chamber of Commerce - Empowering Business, Driving Prosperity">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="https://ssewanyana-nicholas.github.io/wdd230/week01/images/kampala.PNG">
+    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd230/chamber/index.html">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="images/kampala-logo.png" alt="kampala logo" class="kampala-logo">
+            <button id="myButton">&#9776;</button>
+            <img src="images/dark-theme.svg" alt="dark mode" id="darkButton" class="dark-theme">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discovery.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a class="active" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="join" >
+        <h2>Membership information</h2>
+        <form action="thankyou.html" method="post" class="wf1" >
+
+            <fieldset>
+                <label>First name*<input type="text" id="first-name" name="first-name" required></label>
+                <label>Last name*<input type="text" id="last-name" name="last-name" required></label>
+
+
+                <label>Title or Position*<input type="text" id="title" name="title" pattern="^[a-zA-Z\s-]{7,}$"
+                        title="Only alpha characters, hyphens, and spaces are allowed. Minimum 7 characters."
+                        required></label>
+                <label>Email address*<input type="email" id="email" name="email" placeholder="example@domain.com"
+                        required></label>
+                <label>mobile phone number*<input type="tel" id="phone" name="phone" required></label>
+                <label>Business/Organization's name<input type="text" id="business-name" name="business-name"
+                        required></label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <div>Membership level Needed</div>
+                <label><input type="radio" name="level" value="yes">NP Membership</label>
+                <label><input type="radio" name="level" value="yes">Bronze Membership</label>
+                <label><input type="radio" name="level" value="yes">Silver Membership</label>
+                <label><input type="radio" name="level" value="yes">Gold Membership</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business description</legend>
+                <div>Tell us about your business</div>
+                <label><textarea id="description" name="description"></textarea></label>
+                <label><input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>"></label>
+            </fieldset>
+
+            <input type="submit" value="Send my info">
+        </form>
+        <div class="membership-benefits">
+            <h3>Membership Level Benefits</h3>
+            <p><strong>NP Membership:</strong> No fee, suitable for non-profit organizations.</p>
+            <p><strong>Bronze Membership:</strong> Basic benefits, including access to events.</p>
+            <p><strong>Silver Membership:</strong> Additional benefits such as training sessions and advertising.</p>
+            <p><strong>Gold Membership:</strong> Premium benefits, including spotlight positions on the home page, event
+                discounts, and more.</p>
+        </div>
+    </main>
+    <footer>
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/scriptsDiscover.js"></script>
+</body>
+
+</html>

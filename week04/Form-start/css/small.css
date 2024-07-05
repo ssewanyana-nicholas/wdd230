@@ -1,8 +1,15 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 
 /*----------- BODY --------------*/
@@ -17,19 +24,31 @@ header {
     padding: .5rem 2%;
     background-color: #ddd;
 }
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+}
 
 /*----------- NAVIGATION --------------*/
 nav {
     background-color: #666;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-nav ul li {border-bottom: solid 1px #333;}
+
+nav ul li {
+    border-bottom: solid 1px #333;
+}
+
 nav ul li a {
     display: block;
     background-color: #444;
@@ -39,10 +58,12 @@ nav ul li a {
     font-size: .9rem;
     text-align: center;
 }
+
 nav ul li.active a {
     background-color: #000;
     color: #fff;
 }
+
 /*----------- MAIN --------------*/
 main {
     padding: 0 2%;
@@ -83,7 +104,8 @@ main {
 .wf1 input[type="url"],
 .wf1 input[type="date"],
 .wf1 input[type="number"],
-.wf1 select {
+.wf1 select,
+.wf1 input[type="hidden"] {
     background-color: #eee;
     display: block;
     border: solid 1px;
@@ -124,6 +146,8 @@ main {
     border: solid 2px green;
 
 }
+
+
 
 
 
