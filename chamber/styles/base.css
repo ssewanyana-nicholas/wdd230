@@ -426,7 +426,8 @@ main.dark div h1 {
 .wf1 input[type="url"],
 .wf1 input[type="date"],
 .wf1 input[type="number"],
-.wf1 select {
+.wf1 select,
+.wf1 textarea {
     background-color: #eee;
     display: block;
     border: solid 1px;
@@ -484,6 +485,7 @@ main.dark div h1 {
     height: 100vh;
     margin: 0;
 }
+
 .thank-you-message {
     text-align: center;
     padding: 20px;
