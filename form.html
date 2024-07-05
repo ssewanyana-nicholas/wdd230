@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development course assignment portal by Nicholas Ssewanyana. Access assignments, resources, and project details for enhancing your web development skills.">
+    <meta name="Author" content="Nicholas Ssewanyana">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Nicholas Ssewanyana - WDD 230 - Web Frontend Development</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="WDD 230: Web Frontend Development 1">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="https://www.achieveglobalsafaris.com/wp-content/uploads/2019/09/Kamoasa.jpg">
+    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd230/index.html">
+</head>
+
+<body>
+    <header>
+        <img src="images/profile-picture.webp" alt="profile picture">
+        <span>Nicholas Ssewanyana</span>
+        <img src="images/dark-theme.svg" alt="dark mode" id="darkButton">
+    </header>
+    <nav>
+        <button id="myButton">&#9776;</button>
+        <ul class="menuLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="current-menu-item"><a href="https://ssewanyana-nicholas.github.io/wdd230/chamber/index.html"
+                    target="_blank">Chamber</a></li>
+            <li><a href="">Site Plan</a></li>
+            <li><a class="active" href="form.html">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="record.html" method="get" class="wf1"   target="_blank">
+            <fieldset>
+                <legend>User Information</legend>
+
+                <label>Username*<input type="text" id="username" name="username" placeholder="Username"
+                        required></label>
+
+                <label>Password*<input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}"
+                        title="Password must be at least 8 characters long and alphanumeric" placeholder="password"
+                        required></label>
+
+                <label>Confirm Password*<input type="password" id="confirmPassword" name="confirmPassword"
+                        pattern="[A-Za-z0-9]{8,}" title="Password must be at least 8 characters long and alphanumeric"
+                        required placeholder="Confirm Password"></label>
+
+                <label>Email*<input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu$"
+                        title="Please enter a valid email address" required placeholder="Enter Email"></label>
+
+                <label for="r">Page Rating</label>
+                <div id="rangevalue">0</div>
+                <input type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
+                <datalist id="rangevalues">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+
+                </datalist>
+                <input type="submit" value="Send my info">
+
+            </fieldset>
+        </form>
+
+    </main>
+    <footer>
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/formValidation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #f4f4f4;
+    --font-size: 18px;
+    --border-radius: 10px;
+    --text-color: #333;
+    --bg-color: #ffffff;
+}
+
+.record {
+    background-color: var(--secondary-color);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    margin: 0;
+    font-size: var(--font-size);
+    color: var(--text-color);
+    display: block;
+}
+
+.record h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    margin: 16px;
+}
+
+.record p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    margin: 4rem 4rem 4rem 4rem;
+}
