@@ -45,6 +45,7 @@
         <form action="thankyou.html" method="post" class="wf1" >
 
             <fieldset>
+                <legend>Applicant Information</legend>
                 <label>First name*<input type="text" id="first-name" name="first-name" required></label>
                 <label>Last name*<input type="text" id="last-name" name="last-name" required></label>
 
@@ -72,8 +73,8 @@
             <fieldset>
                 <legend>Business description</legend>
                 <div>Tell us about your business</div>
-                <label><textarea id="description" name="description"></textarea></label>
-                <label><input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>"></label>
+                <textarea id="description" name="description"></textarea>
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
             </fieldset>
 
             <input type="submit" value="Send my info">
