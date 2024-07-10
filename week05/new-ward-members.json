@@ -1,0 +1,28 @@
+{
+    "familyName": "Ssewanyana",
+    "moveInDate": "2021-05-15",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Nicholas Ssewanyana",
+            "gender": "Male",
+            "birthdate": "1993-07-07"
+        },
+        {
+            "name": "Mariam Ssewanyana",
+            "gender": "Female",
+            "birthdate": "2000-04-06"
+        },
+        {
+            "name": "Nicole Ssewanyana",
+            "gender": "Female",
+            "birthdate": "2020-11-25"
+        },
+        {
+            "name": "Smith Ssewanyana",
+            "gender": "Male",
+            "birthdate": "2022-06-05"
+        }
+    ]
+}
