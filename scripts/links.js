@@ -20,7 +20,7 @@ async function getLinks() {
 
 // Function to display links
 function displayLinks(weeks) {
-    const container = document.getElementById('learningActivities'); // Assuming your HTML has a <ul> with id 'learningActivities'
+    const container = document.getElementById('learningActivities'); 
 
     weeks.weeks.forEach(week => {
         // Create list item for week title
@@ -35,6 +35,7 @@ function displayLinks(weeks) {
             const linkElement = document.createElement('a');
             linkElement.href = link.url.startsWith('http') ? link.url : `${baseURL}${link.url}`;
             linkElement.textContent = link.title;
+            linkElement.target = "_blank"; // Open link in new tab
             linksSpan.appendChild(linkElement);
 
             if (index < week.links.length - 1) {
