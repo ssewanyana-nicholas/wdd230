@@ -35,21 +35,25 @@ function displayProphets(prophets) {
         let card = document.createElement('section'); // Create a <section> element for the card
         let fullName = document.createElement('h2'); // Create an <h2> element for full name
         let portrait = document.createElement('img'); // Create an <img> element for portrait
-
+        let birthdate = document.createElement('p');
+        let birthplace = document.createElement('p');
         // Set content and attributes for the fullName <h2> element
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
 
         // Set attributes for the portrait <img> element
         portrait.src = prophet.imageurl; // Set src attribute to the prophet's image URL
         portrait.alt = `Portrait of ${prophet.name} ${prophet.lastname}`; // Set alt attribute for accessibility
+        birthdate.textContent = `Date of birth: ${prophet.birthdate}`;
+        birthplace.textContent = `Place of birth: ${prophet.birthplace}`;
         portrait.loading = 'lazy'; // Set loading attribute to lazy load the image
         portrait.width = '340'; // Set width attribute for the image (adjust as needed)
         portrait.height = '440'; // Set height attribute for the image (adjust as needed)
 
         // Append the fullName <h2> and portrait <img> elements to the card <section>
         card.appendChild(fullName);
+        card.appendChild(birthdate);
+        card.appendChild(birthplace);
         card.appendChild(portrait);
-
         // Append the card <section> to the #cards container in the HTML
         cards.appendChild(card);
     });
