@@ -33,25 +33,31 @@
             <img src="images/dark-theme.svg" alt="dark mode" id="darkButton" class="dark-theme">
             <ul class="menuLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a class="active" href="join.html">Join</a></li>
+                <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+                <li><a class="active" href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
 
     </header>
-    <main class="thankyou">
-        <div class="thank-you-message">
-            <h1>Thank You!</h1>
-            <p>Your form has been successfully submitted.</p>
-        </div>
-    </main>
-    <footer>
-        <p id="copyright"></p>
-        <p id="lastModified"></p>
-    </footer>
 
-    <script src="scripts/scriptsDiscover.js"></script>
-</body>
+    <body>
+        <main class="maingrid">
+            <div class="menu">
+                <button id="grid">⏹️Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <hr>
+            <article class="membersGrid">
+            </article>
+        </main>
+        <footer>
+            <p id="copyright"></p>
+            <p id="lastModified"></p>
+        </footer>
+
+        <script src="scripts/scriptsDiscover.js"></script>
+        <script src="scripts/members.js"></script>
+    </body>
 
 </html>
