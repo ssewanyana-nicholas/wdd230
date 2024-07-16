@@ -17,7 +17,7 @@ const displayMembers = (members) => {
         let section = document.createElement('section');
         let picture = document.createElement('picture');
         let image = document.createElement('img');
-        let h3 = document.createElement('h3');
+        let h2 = document.createElement('h2');
         let p1 = document.createElement('p');
         let p2 = document.createElement('p');
         let p3 = document.createElement('p');
@@ -28,7 +28,7 @@ const displayMembers = (members) => {
         image.setAttribute('src', member.image || member.imageurl);
         image.setAttribute('width', "150px");
         picture.appendChild(image);
-        h3.textContent = member.businessname;
+        h2.textContent = member.businessname;
         p1.textContent = "Address: " + member.address;
         p2.textContent = "Phone Number: " + member.phone;
         p3.textContent = "Membership Level: " + member.membershiplevel;
@@ -39,7 +39,7 @@ const displayMembers = (members) => {
         url.setAttribute('target', "_blank");
         url.textContent = member.website;
 
-        section.appendChild(h3);
+        section.appendChild(h2);
         section.appendChild(picture);
         section.appendChild(p1);
         section.appendChild(p2);
