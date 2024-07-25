@@ -106,9 +106,27 @@
             </section>
             <section class="card">
                 <h2>Information</h2>
-                <div>weather: [Placeholders]</div>
-                <div>number of visits to the page: <span class="visits" ></span> </div>
+                <div class="kampala">Kampala city weather: <span id="current-temp"></span></div>
+                <figure>
+                    <img id="weather-icon" class="weather-icon" src="" alt="">
+                    <figcaption id="weather-description"></figcaption>
+                </figure>
+                <div>Number of visits to the page: <span class="visits"></span></div>
+                <div class="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <ul id="forecast-list"></ul>
+                </div>
             </section>
+
+            <section class="spotlight">
+                <h2>Spotlight Members</h2>
+                <div id="spotlight-container"></div>
+            </section>
+
+            <div id="meet-greet-banner" class="banner">
+                <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+                <button id="close-banner">❌</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -116,7 +134,7 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/scriptsHome.js" ></script>
+    <script src="scripts/scriptsHome.js"></script>
 </body>
 
 </html>

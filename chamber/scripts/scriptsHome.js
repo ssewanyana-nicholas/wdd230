@@ -64,3 +64,149 @@ numVisits++;
 localStorage.setItem("numVisits-ls", numVisits);
 
 // 💡A client can view the localStorage data using the Applications panel in the browsers's DevTools - check it out on any major site.
+
+const membersUrl = 'https://ssewanyana-nicholas.github.io/wdd230/chamber/data/members.json';
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=0.31&lon=32.59&units=imperial&appid=99990204cea55bff7337537fe3fbbcc4';
+const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=0.31&lon=32.59&units=imperial&appid=99990204cea55bff7337537fe3fbbcc4';
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchWeatherData();
+    fetchMemberData();
+    setupBanner();
+    checkLinks();
+});
+
+let slideIndex = 0;
+
+function fetchWeatherData() {
+    fetch(weatherUrl)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('current-temp').textContent = `${data.main.temp}°F`;
+            const weatherIcon = document.getElementById('weather-icon');
+            weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            weatherIcon.alt = data.weather[0].description;
+            document.getElementById('weather-description').textContent = data.weather[0].description;
+        })
+        .catch(error => console.error('Error fetching weather data:', error));
+
+    fetch(forecastUrl)
+        .then(response => response.json())
+        .then(data => {
+            const forecastList = document.getElementById('forecast-list');
+            forecastList.innerHTML = '';
+
+            const forecasts = data.list.filter((item, index) => index % 8 === 0).slice(0, 3); // Get daily forecasts
+            forecasts.forEach(forecast => {
+                const li = document.createElement('li');
+                li.textContent = `Day ${new Date(forecast.dt_txt).toLocaleDateString()}: ${forecast.main.temp}°F, ${forecast.weather[0].description}`;
+                forecastList.appendChild(li);
+            });
+        })
+        .catch(error => console.error('Error fetching forecast data:', error));
+}
+
+function fetchMemberData() {
+    fetch(membersUrl)
+        .then(response => response.json())
+        .then(members => {
+            const spotlightContainer = document.getElementById('spotlight-container');
+            const eligibleMembers = members.filter(member => member.membershiplevel === 'Gold Membership' || member.membershiplevel === 'Silver Membership');
+
+            function loadSpotlights() {
+                spotlightContainer.innerHTML = ''; // Clear previous spotlights
+                const shuffledMembers = eligibleMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+                shuffledMembers.forEach(member => {
+                    const slideDiv = document.createElement('div');
+                    slideDiv.className = 'slide';
+
+                    const img = document.createElement('img');
+                    img.src = member.imageurl;
+                    img.alt = member.businessname;
+                    slideDiv.appendChild(img);
+
+                    const businessName = document.createElement('h3');
+                    businessName.textContent = member.businessname;
+                    slideDiv.appendChild(businessName);
+
+                    const address = document.createElement('p');
+                    address.textContent = member.address;
+                    slideDiv.appendChild(address);
+
+                    const phone = document.createElement('p');
+                    phone.textContent = `Phone: ${member.phone}`;
+                    slideDiv.appendChild(phone);
+
+                    const website = document.createElement('a');
+                    website.href = member.website;
+                    website.textContent = member.website;
+                    website.target = '_blank';
+                    slideDiv.appendChild(website);
+
+                    const otherInfo = document.createElement('p');
+                    otherInfo.textContent = member.otherinformation;
+                    slideDiv.appendChild(otherInfo);
+
+                    // New element for membership level
+                    const membershipLevel = document.createElement('p');
+                    membershipLevel.className = 'membership-level';
+                    membershipLevel.textContent = `Membership Level: ${member.membershiplevel}`;
+                    slideDiv.appendChild(membershipLevel);
+
+                    spotlightContainer.appendChild(slideDiv);
+                });
+
+                showSlides(slideIndex);
+            }
+
+            loadSpotlights();
+            setInterval(loadSpotlights, 2000); // Reload spotlights every 20 seconds
+        })
+        .catch(error => console.error('Error fetching member data:', error));
+}
+
+function setupBanner() {
+    const banner = document.getElementById('meet-greet-banner');
+    const closeButton = document.getElementById('close-banner');
+    const today = new Date().getDay();
+
+    if (today >= 1 && today <= 3) { // Show banner on Monday, Tuesday, and Wednesday
+        banner.style.display = 'block';
+    } else {
+        banner.style.display = 'none';
+    }
+
+    closeButton.addEventListener('click', () => {
+        banner.style.display = 'none';
+    });
+}
+
+function checkLinks() {
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        fetch(link.href)
+            .then(response => {
+                if (!response.ok) {
+                    console.error(`Link not working: ${link.href}`);
+                }
+            })
+            .catch(() => console.error(`Link not working: ${link.href}`));
+    });
+}
+
+function showSlides(n) {
+    const slides = document.querySelectorAll('.slide');
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach((slide, index) => {
+        slide.style.display = index === slideIndex ? 'block' : 'none';
+    });
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}

@@ -579,10 +579,6 @@ section h3 {
     font-size: 1.5rem;
 }
 
-section p {
-    font-weight: 600;
-    font-size: smaller;
-}
 
 section a {
     font-family: "Roboto", Arial, sans-serif;
@@ -596,4 +592,102 @@ img {
     height: 200px;
     object-fit: cover;
     /* Images are jerks - Seattle*/
+}
+
+#current-temp {
+    font-size: 15px;
+}
+
+img#weather-icon {
+    font-size: 25px;
+}
+
+figcaption {
+    font-size: 15px;
+    text-align: center;
+}
+
+.weather-icon {
+    width: 60px;
+    /* Adjust the width as needed */
+    height: 60px;
+    /* Adjust the height as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffcc00;
+    /* Change to your desired background color */
+    color: #000;
+    /* Change to your desired text color */
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.banner p {
+    margin: 0;
+    display: inline-block;
+}
+
+.banner button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.banner button:hover {
+    color: red;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides */
+.slide {
+    display: none;
+}
+
+/* Previous and next buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.membership-level {
+    font-style: italic;
+    color: #941807; /* Adjust color as needed */
+    font-size: 14px;
 }
